@@ -1,0 +1,64 @@
+
+  
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--body-color);
+    padding: 1.8rem;
+    background-color: var(--theme-color);
+  }
+
+
+.heading-primary {
+    color: #444;
+    text-transform: uppercase;
+    /*Flex */
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+  
+    &--main {
+      font-size: 8rem;
+      font-weight: 400;
+      letter-spacing: 2.8rem;
+      margin-right: -2.8rem;
+      animation: ease-in-out moveInDown 1s;
+    }
+    
+    &--sub {
+      font-size: 2.5rem;
+      font-weight: 400;
+      letter-spacing: 0.7rem;
+      margin-right: -0.7rem;
+      animation-name: fadeIn;
+      animation-duration: 3s;
+    }
+  }
+  
+
+  .heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right ,var(--primary-dark),var(--primary-light));
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   letter-spacing: .2rem; 
+  }
+
+  .heading-tertiary {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+  }
+  .paragraph {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }

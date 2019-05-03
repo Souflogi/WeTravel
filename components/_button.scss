@@ -1,0 +1,56 @@
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    
+
+    &--animated {
+      animation: ease-in fadeIn 1s 1s;
+      animation-fill-mode: backwards;
+    }
+    &--black {
+      transition: 0.5s;
+      color: var(--body-color);
+      background-color: rgba(51, 51, 51, 0.747);
+      font-size: 2rem;
+
+      &:hover {
+        transform: scale(.95);
+      }
+    }
+    color: #383736;
+  }
+
+  .btn-text {
+      color: var(--primary-dark);
+      border-bottom: 1px solid var(--primary-light);
+      padding: .5rem 1rem;
+      align-self: flex-start;
+      
+      font-size: 1.5rem;
+      position: relative;
+      background: none;
+      z-index: 1;
+
+      &:hover{
+        color: var(--primary-light);
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: var(--primary-dark);
+        bottom: 0;
+        left: 0;
+        right:100%;
+        top: 0;
+        z-index: -1;
+        transition:  right 0.09s ease-in;
+      }
+      &:hover:before {
+        right: 0;
+      }
+  }
