@@ -8,8 +8,10 @@
   },
   "author": "Soufiane",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.12.0"
   }
 }

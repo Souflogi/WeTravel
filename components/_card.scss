@@ -1,0 +1,115 @@
+.card {
+
+    -webkit-perspective: 150rem;
+    height: 50rem;
+    width: 30rem;
+
+
+    &__side {
+        backface-visibility: hidden;
+        transition: all .5s ease-in;
+        height: 100%;
+        width: 100%;
+        border-radius: 7px;
+        box-shadow: 0 1.5rem 4rem rgba(#fff, .15);
+        overflow: hidden;
+
+
+        &--front {
+            background-color: #fff;
+            position: relative;
+        }
+
+        &--back {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            transform: rotateY(-180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, var(--primary-light), var(--primary-dark));
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, var(--color-tertiary-light), var(--color-tertiary-dark));
+            }
+        }
+
+
+
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 45%;
+        background-blend-mode: screen;
+        overflow: hidden;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+
+
+        &--1 {
+            background-image:
+                linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)),
+                url(../img/nat-5.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: #fff;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image:
+                linear-gradient(to right bottom, rgba(#DA4453, .8), rgba(#89216B, .7));
+        }
+    }
+
+    &__details {
+
+        padding: 3rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            color: var(--color-secondary-dark);
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: var(--color-secondary-dark) solid 1px;
+
+                }
+
+            }
+        }
+    }
+}

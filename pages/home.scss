@@ -18,7 +18,12 @@
       url("../img/nat-4.jpg");
 
       clip-path: polygon(0 0,50% 5%,100% 0,100% 100%,50% 95%,0 100%);
+}
 
-     
-
+.section-tours{
+    background-color: var(--theme-color2);
+    padding: 25rem 0 20rem 0;
+    margin-top: -10rem;  
+    display: flex;
+    flex-direction: column;
 }
