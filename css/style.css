@@ -158,6 +158,10 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, var(--primary-light), var(--primary-dark)), url(../img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, var(--color-tertiary-light), var(--color-tertiary-dark)), url(../img/nat-7.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -173,6 +177,10 @@ body {
     -webkit-box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(218, 68, 83, 0.8), rgba(137, 33, 107, 0.7)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(255, 251, 213, 0.8), rgba(178, 10, 44, 0.7)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(203, 173, 109, 0.8), rgba(213, 51, 105, 0.7)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -186,6 +194,20 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: var(--color-secondary-dark) solid 1px; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price-box {
+    text-align: center;
+    margin-bottom: 4rem; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .btn {
   text-decoration: none;
@@ -206,20 +228,26 @@ body {
       transform: scale(0.95); }
 
 .btn-text {
-  color: var(--primary-dark);
-  border-bottom: 1px solid var(--primary-light);
   padding: .5rem 1rem;
   align-self: flex-start;
   font-size: 1.5rem;
   position: relative;
   background: none;
   z-index: 1; }
-  .btn-text:hover {
+  .btn-text-1 {
+    color: var(--primary-dark);
+    border-bottom: 1px solid var(--primary-light); }
+  .btn-text-1:hover {
     color: var(--primary-light); }
+  .btn-text-2 {
+    padding: 1rem 2rem;
+    color: var(--primary-light);
+    border-bottom: 1px solid var(--primary-light); }
+  .btn-text-2:hover {
+    color: var(--primary-dark); }
   .btn-text:before {
     content: "";
     position: absolute;
-    background: var(--primary-dark);
     bottom: 0;
     left: 0;
     right: 100%;
@@ -228,6 +256,10 @@ body {
     transition: right 0.09s ease-in; }
   .btn-text:hover:before {
     right: 0; }
+  .btn-text-1::before {
+    background: var(--primary-dark); }
+  .btn-text-2::before {
+    background: var(--primary-light); }
 
 .cropedimg1 {
   height: 100%;
